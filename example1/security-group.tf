@@ -1,6 +1,7 @@
 resource "aws_security_group" "web" {
   name        = "web"
   description = "Allow TLS inbound traffic and all outbound traffic"
+  vpc_id      = vpc-09af6f7de90a9d539
 
   tags = {
     Name = "web"
