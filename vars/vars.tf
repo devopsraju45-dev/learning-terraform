@@ -13,3 +13,11 @@ variable "test1" {
 output "test1" {
   value = var.test1
 }
+
+variable "test2" {
+  default = "hello"
+}
+
+output "test2" {
+  value = var.test1
+}
