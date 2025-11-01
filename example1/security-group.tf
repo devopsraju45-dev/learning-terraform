@@ -9,7 +9,7 @@ resource "aws_security_group" "web" {
 }
 
 # Allow inbound HTTPS from anywhere
-resource "aws_vpc_security_group_ingress_rule" "web_ipv4" {
+resource "aws_vpc_security_group_ingress_rule" "web1_ipv4" {
   security_group_id = aws_security_group.web.id
   cidr_ipv4         = "0.0.0.0/0"
   from_port         = 22
@@ -17,7 +17,7 @@ resource "aws_vpc_security_group_ingress_rule" "web_ipv4" {
   to_port           = 22
 }
 
-resource "aws_vpc_security_group_ingress_rule" "web_ipv4" {
+resource "aws_vpc_security_group_ingress_rule" "web1_ipv4" {
   security_group_id = aws_security_group.web.id
   cidr_ipv4         = "0.0.0.0/0"
   from_port         = 80
