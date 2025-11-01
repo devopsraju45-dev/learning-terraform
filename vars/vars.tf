@@ -7,7 +7,6 @@ output "test" {
 }
 
 variable "test1" {
-  default = "hello"
 }
 
 output "test1" {
@@ -15,9 +14,15 @@ output "test1" {
 }
 
 variable "test2" {
-  default = "hello"
 }
 
 output "test2" {
+  value = var.test1
+}
+
+variable "test3" {
+}
+
+output "test3" {
   value = var.test1
 }
