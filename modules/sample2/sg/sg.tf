@@ -34,8 +34,6 @@ resource "aws_vpc_security_group_egress_rule" "web_ipv4" {
   ip_protocol       = "-1"
 }
 
-
-
 output "sgid" {
 value = aws_security_group.web.id
 }
