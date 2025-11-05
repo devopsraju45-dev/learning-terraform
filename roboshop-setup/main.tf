@@ -3,6 +3,7 @@ resource "aws_instance" "app" {
   ami                    = data.aws_ami.ami.image_id
   instance_type          = "t3.micro"
   iam_instance_profile   = "secretmanager"
+  vpc_security_group_ids = ["sg-066b6d4e7cd0c135f"]
   tags = {
     Name = "${var.components["${count.index}"]}-dev"
   }
